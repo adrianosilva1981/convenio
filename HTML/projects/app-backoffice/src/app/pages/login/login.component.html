@@ -1,0 +1,30 @@
+<div class="cntAll">
+  <div class="boxLogin">
+    <form [formGroup]="loginForm" novalidate (ngSubmit)="submitLoginForm()">
+
+      <div class="tltLogin">
+        <div class="cnt">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Ingress_Logo.png">
+          <div class="text">Login</div>
+        </div>
+      </div>
+
+      <div class="cntInputs">
+        <div class="inputs">
+          <div class="form-group">
+            <input class="form-control" autofocus type="email" formControlName="email" placeholder="E-mail" pInputText>
+          </div>
+          <div class="form-group">
+            <input class="form-control" autofocus type="password" formControlName="password" placeholder="Senha" pInputText>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentBtn">
+        <button class="btn btn_default" [disabled]="!loginForm.valid" type="submit">
+          <span translate>Entrar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+@import url('https://s3.amazonaws.com/upsellexpert/public/css/bootstrap.min.css');
+@import url('https://s3.amazonaws.com/upsellexpert/public/css/google_css.css');
+@import url('https://s3.amazonaws.com/upsellexpert/public/css/google_icon.css');
+@import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('global/css/global-variables.less');
+@import url('global/css/global-functions.less');
+* {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+body {
+  background: @bodyBG;
+  color: #586066;
+  position: relative;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.container {
+  max-width: 1170px !important;
+}
+
+html {
+  font-size: unset !important;
+}
+
+//*******************************
+//FORMULARIOS********************
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+  &.invalid_meta_info {
+    .ui-state-default {
+      border: 1px solid @inputWarn !important;
+    }
+  }
+  [ng-reflect-css-class~=fabio] {
+    display: block;
+    font-size: 1rem !important;
+    color: #495057 !important;
+    border: 1px solid @grey05 !important;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    .boxShadow(0px 4px 10px 0px rgba(5, 5, 5, 0.2)) !important;
+    input {
+      background: transparent;
+      border: none;
+      padding-left: 40px !important;
+      width: 100% !important;
+      ;
+    }
+    .intl-tel-input {
+      background: transparent;
+      border: none;
+      width: 100%;
+      .flag-container {
+        &:hover {
+          .selected-flag {
+            background-color: transparent;
+          }
+        }
+        .selected-flag {
+          padding: 0;
+        }
+      }
+    }
+    &.ng-invalid:not(.ng-untouched) {
+      border: 1px solid @inputWarn !important;
+    }
+  }
+  .form-control {
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+    color: #495057 !important;
+    border: 1px solid @grey05 !important;
+    .boxShadow(0px 4px 10px 0px rgba(5, 5, 5, 0.2));
+    &:disabled {
+      border: none;
+      color: @grey08 !important;
+      cursor: not-allowed;
+      background: @grey04;
+    }
+    &:focus {
+      color: #495057;
+      background-color: #fff;
+      border-color: #80bdff;
+      outline: 0;
+      .boxShadow(0px 4px 10px 0px rgba(5, 5, 5, 0.2));
+    }
+    &.ng-invalid:not(.ng-untouched) {
+      border: 1px solid @inputWarn !important;
+    }
+  }
+  input {
+    &:read-only {
+      background: #e9ecef !important;
+      border-color: #ced4da !important;
+      outline: 0;
+      box-shadow: none !important;
+      color: @grey08 !important;
+      cursor: not-allowed;
+    }
+  }
+  .errorFormField {
+    position: absolute;
+    color: @red04;
+    font-size: 10px
+  }
+  >label {
+    color: @blue05;
+    text-transform: uppercase;
+  }
+}
+
+//*******************************
+// FORMATAÇÃO DO SCROLL**********
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: @grey05;
+  padding: 0px 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  .radius(5px);
+  background: rgba(153, 153, 153, 0.5);
+  &:window-inactive {
+    background: @grey08;
+  }
+}
