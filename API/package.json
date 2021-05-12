@@ -19,7 +19,7 @@
     "jsonwebtoken": "^7.4.0",
     "md5": "^2.2.1",
     "mongoose": "^4.13.3",
-    "nodemailer": "^4.6.4",
+    "nodemailer": "^6.4.16",
     "sendgrid": "^2.0.0"
   },
   "devDependencies": {
